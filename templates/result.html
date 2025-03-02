@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Country Information</h2>
+
+        <h3>{{.Country.Name.Common}}</h3>
+        <p><strong>Capital:</strong> {{index .Country.Capital 0}}</p>
+        <p><strong>Population:</strong> {{.Country.Population}}</p>
+        <p><strong>Region:</strong> {{.Country.Region}}</p>
+        <p><strong>Flag:</strong></p>
+        <img src="{{.Country.Flags.PNG}}" width="150">
+
+        <br><br>
+        <a href="/">Return to Homepage</a>
+    </div>
+</body>
+</html>
